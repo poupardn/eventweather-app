@@ -3,7 +3,7 @@ This is a React Javascript application with AWS Amplify components added in to s
 To run this, you will need to install the amplify-cli, visit [the Amplify docs](https://aws-amplify.github.io/docs/). This requires an AWS account, but can be run on the free tier. Also, the amplify-cli must be run on bash (Linux/MacOS/WSL).
 
 1) From the root of the app, run "npm install". This will take awhile.
-2) Run "amplify init". 
+2) Run ```amplify init``` 
    - You can choose your own project/application name. 
    - You can also select your default editor. 
    - When prompted, choose "Javascript and React"
