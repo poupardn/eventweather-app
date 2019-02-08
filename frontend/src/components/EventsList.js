@@ -27,7 +27,6 @@ class EventsList extends Component {
     }
 
     getEvents(within) {
-        console.log(properties.apiUrl);
         axios.get(properties.apiUrl + "/eventweather", {
             params: {
                 latitude: this.props.latitude,
@@ -44,7 +43,6 @@ class EventsList extends Component {
     }
 
     componentDidMount() {
-        console.log("mounted");
         this.getEvents(this.state.activeItem);
     }
 
@@ -85,7 +83,7 @@ class EventsList extends Component {
                     </Table.Header>
                     <Table.Body>
                         {this.state.events.map(currentItem => (
-                            <Table.Row>
+                            <Table.Row key={currentItem.url}>
                                 <Table.Cell>{currentItem.eventName}</Table.Cell>
                                 <Table.Cell><a href={currentItem.url} target="_blank">Click for description</a></Table.Cell>
                                 <Table.Cell>{currentItem.address}</Table.Cell>
